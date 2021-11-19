@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('create image') {
             steps {
-                sh 'docker build .'
+                sh 'docker build -t iba_docker .'
+                sh 'docker run iba_docker'
             }
         }
     }
